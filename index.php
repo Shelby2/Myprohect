@@ -237,6 +237,20 @@
     ?>
 
 </div>
+<div>
+    <?php
+//   $speed=120;
+   $b1=120;
+   $array2 = [1,2,3,5,6,6,3,3,5];
+   echo ($speed <= 60) ? "Speed normal" : "Speed not normal";
+   echo "<br>";
+   echo $speed ? $b1 : "Другое значение";
+    echo "<br>";
+   echo $speed ?? "Другое значение";
+
+    ?>
+
+</div>
 
 
 </body>
