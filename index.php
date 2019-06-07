@@ -80,25 +80,162 @@
 <div>
     <?php
     $d = 2;
-    echo "Инкремент/дикремент","<br>";
-    echo $d++,"<br>";
-    echo ++$d,"<br>";
-    echo $d--,"<br>";
-    echo --$d,"<br>";
+    echo "Инкремент/дикремент", "<br>";
+    echo $d++, "<br>";
+    echo ++$d, "<br>";
+    echo $d--, "<br>";
+    echo --$d, "<br>";
 
     ?>
 </div>
 <div>
     <?php
 
-    echo "Конкатенация","<br>";
+    echo "Конкатенация", "<br>";
     $f = "Hello";
-    $f = $f." world";
+    $f = $f . " world";
     echo $f;
     $f .= "!!!";
-    echo "<br>" , $f;
+    echo "<br>", $f;
 
     ?>
+
+</div>
+<div>
+    <?php
+
+    echo "<br>";
+    $value = 10;
+    $value += 5;
+    echo $value;
+
+    ?>
+
+</div>
+<div>
+    <?php
+
+    $t = 1;
+    if ($t == "1") {
+        echo "не строгое сравнение ";
+        echo "true";
+    } else {
+        echo "<br>";
+        echo "false";
+    }
+    if ($t === "1") {
+        echo "<br>";
+        echo "строгое стравнение ";
+        echo "true";
+    } else {
+        echo "<br>";
+        echo "false";
+    }
+    if ($t != "1") {
+        echo "<br>";
+        echo "нестрогое НЕ стравнение ";
+        echo "true";
+    } else {
+        echo "<br>";
+        echo "false";
+    }
+    if ($t !== "1") {
+        echo "<br>";
+        echo "строгое НЕ стравнение ";
+        echo "true";
+    } else {
+        echo "<br>";
+        echo "false";
+    }
+    if ($t > 1) {
+        echo "<br>";
+        echo "больше ";
+        echo "true";
+    } else {
+        echo "<br>";
+        echo "false";
+    }
+    if ($t < 1) {
+        echo "<br>";
+        echo "меньше ";
+        echo "true";
+    } else {
+        echo "<br>";
+        echo "false";
+    }
+    if ($t <= "1") {
+        echo "<br>";
+        echo "больше либо равно ";
+        echo "true";
+    } else {
+        echo "<br>";
+        echo "false";
+    }
+    if ($t >= "1") {
+        echo "<br>";
+        echo "меньше либо равно ";
+        echo "true";
+    } else {
+        echo "<br>";
+        echo "false";
+    }
+    if ($t && "1") {
+        echo "<br>";
+        echo "и ";
+        echo "true";
+    } else {
+        echo "<br>";
+        echo "false";
+    }
+    if ($t || "1") {
+        echo "<br>";
+        echo "или ";
+        echo "true";
+    } else {
+        echo "<br>";
+        echo "false";
+    }
+    if ($t xor "1") {
+        echo "<br>";
+        echo "Исключающее или ";
+        echo "true";
+    } else {
+        echo "<br>";
+        echo "false";
+    }
+    if ($t == false) {
+        echo "<br>";
+        echo "Равно ли чтсло  ";
+        echo "true";
+    } else {
+        echo "<br>";
+        echo "false";
+    }
+
+
+    ?>
+
+</div>
+<div>
+    <?php
+    $a = 100;
+    echo "Применение Switch";
+    echo "<br>";
+    echo "<pre>";
+    switch ($a) {
+        case $a >= 70 :
+            echo "Остановись";
+            break;
+        case $a == 60 :
+            echo "Превышаешь";
+            break;
+        case $a <= 50 :
+            echo "Норма";
+            break;
+    }
+
+    ?>
+
 </div>
 
 
