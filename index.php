@@ -77,6 +77,29 @@
 
     ?>
 </div>
+<div>
+    <?php
+    $d = 2;
+    echo "Инкремент/дикремент","<br>";
+    echo $d++,"<br>";
+    echo ++$d,"<br>";
+    echo $d--,"<br>";
+    echo --$d,"<br>";
+
+    ?>
+</div>
+<div>
+    <?php
+
+    echo "Конкатенация","<br>";
+    $f = "Hello";
+    $f = $f." world";
+    echo $f;
+    $f .= "!!!";
+    echo "<br>" , $f;
+
+    ?>
+</div>
 
 
 </body>
