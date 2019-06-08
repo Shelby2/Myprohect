@@ -16,8 +16,7 @@
         }
 
         h1 {
-            background-color: aqua;
-            border-radius: 25px;
+
             text-align: center;
         }
 
@@ -32,8 +31,9 @@
     </style>
 </head>
 <body>
-<h1>First calculator on PHP</h1>
+
 <div>
+    <h3>Calculator on PHP with  SWITCH</h3>
     <?php
     $a = 10;
     $b = 4;
@@ -41,43 +41,56 @@
 
     switch ($c){
         case "+":
-            echo $sum = $a + $b . $sum . "<br>";
+            $sum = $a + $b . $sum . "<br>";
             break;
         case "-":
-            echo $diff = $a - $b . $diff . "<br>";
+            $diff = $a - $b . $diff . "<br>";
             break;
         case "*":
-            echo $multipl = $a * $b . $multipl . "<br>";
+            $multipl = $a * $b . $multipl . "<br>";
             break;
         case "/":
-            echo $divis = $a / $b . $divis . "<br>";
+            $divis = $a / $b . $divis . "<br>";
             break;
         case "%":
-            echo $rem = $a % $b . $rem . "<br>";
+            $rem = $a % $b . $rem . "<br>";
             break;
         default :
             echo "Введите значение";
 
     }
+    echo $rem;
+    echo $sum;
+    echo $diff;
+    echo $divis;
+    echo $multipl;
+
     ?>
 </div>
 <div>
+    <h3>Calculator on PHP with  IF/ELSE</h3>
     <?php
-    $array1 = [4, 3, 4, 3, 6, 4, 7, 4, 3, 2];
-    $array = [
-        "Name" => "Dmitriy",
-        "Age" => 22,
-        "Login" => true,
-    ];
-    print_r(array_filter($array1));
-    echo "<br>";
-    echo "<pre>";
-    var_dump(count($array1));
-    echo "<br>";
-    print_r(array_chunk($array, 2));
-    $result = array_unique($array1);
-    echo "Только неповторяющиеся значения массива: ";
-    print_r($result);
+    $a1 = 1;
+    $b1 = 5;
+    $c1 = "/";
+
+    if ($c1 === "+"){
+        $d1 = $a1 + $b1. $d1 . "<br>";
+
+    } elseif ($c1 === "-"){
+        $f1 = $a1 + $b1. $f1 . "<br>";
+    } elseif ($c1 === "*"){
+        $e1 = $a1 * $b1. $e1 . "<br>";
+    } elseif ($c1 === "/"){
+        $g1 = $a1 / $b1. $g1 . "<br>";
+        if ($b1 === 0){
+            echo "Деление на 0 !!!";
+        }
+    }
+    echo $d1;
+    echo $f1;
+    echo $e1;
+    echo $g1;
 
     ?>
 </div>
