@@ -35,26 +35,30 @@
 <h1>First calculator on PHP</h1>
 <div>
     <?php
-    $a = 2;
-    $b = 5;
+    $a = 10;
+    $b = 4;
+    $c = "";
 
+    switch ($c){
+        case "+":
+            echo $sum = $a + $b . $sum . "<br>";
+            break;
+        case "-":
+            echo $diff = $a - $b . $diff . "<br>";
+            break;
+        case "*":
+            echo $multipl = $a * $b . $multipl . "<br>";
+            break;
+        case "/":
+            echo $divis = $a / $b . $divis . "<br>";
+            break;
+        case "%":
+            echo $rem = $a % $b . $rem . "<br>";
+            break;
+        default :
+            echo "Введите значение";
 
-    $sum = $a + $b;
-    $diff = $a - $b;
-    $multipl = $a * $b;
-    $divis = $a / $b;
-    $rem = $a % $b;
-
-    echo "<pre>";
-    echo "Сложение a и b: ", $sum, "<br>";
-    echo "Вычитание a и b: ", $diff, "<br>";
-    echo "Умножение a и b: ", $multipl, "<br>";
-    echo "Деление a и b: ", $divis, "<br>";
-    echo "Остаток от деления a и b: ", $rem, "<br>";
-    echo "Модуль числа: ", "<br>", abs($sum), "<br>", abs($diff), "<br>", abs($multipl), "<br>", abs($divis);
-    echo "<br>", "Преобразование числа в восьмеричное представление в виде строки: ", "<br>", decoct($sum), "<br>", decoct($diff), "<br>", decoct($multipl), "<br>", decoct($divis);
-
-
+    }
     ?>
 </div>
 <div>
