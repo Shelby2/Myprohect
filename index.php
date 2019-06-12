@@ -35,25 +35,30 @@
 <div>
     <h3>Calculator on PHP with  SWITCH</h3>
     <?php
+    error_reporting(0);
     $a = 10;
-    $b = 4;
-    $c = "";
+    $b = 0;
+    $c = "/";
 
     switch ($c){
         case "+":
-            $sum = $a + $b . $sum . "<br>";
+            $sum = $a + $b . "<br>";
             break;
         case "-":
-            $diff = $a - $b . $diff . "<br>";
+            $diff = $a - $b . "<br>";
             break;
         case "*":
-            $multipl = $a * $b . $multipl . "<br>";
+            $multipl = $a * $b . "<br>";
             break;
         case "/":
-            $divis = $a / $b . $divis . "<br>";
-            break;
+            $divis = $a / $b . "<br>";
+            if ($b === 0){
+                echo "Деление на 0!!!" . "<<br>>";
+            }
+            break;hg``
         case "%":
-            $rem = $a % $b . $rem . "<br>";
+            $rem = $a % $b . "<br>";
+
             break;
         default :
             echo "Введите значение";
@@ -70,19 +75,20 @@
 <div>
     <h3>Calculator on PHP with  IF/ELSE</h3>
     <?php
+    error_reporting(0);
     $a1 = 1;
-    $b1 = 5;
+    $b1 = 0;
     $c1 = "/";
 
     if ($c1 === "+"){
-        $d1 = $a1 + $b1. $d1 . "<br>";
+        $d1 = $a1 + $b1. "<br>";
 
     } elseif ($c1 === "-"){
-        $f1 = $a1 + $b1. $f1 . "<br>";
+        $f1 = $a1 + $b1. "<br>";
     } elseif ($c1 === "*"){
-        $e1 = $a1 * $b1. $e1 . "<br>";
+        $e1 = $a1 * $b1. "<br>";
     } elseif ($c1 === "/"){
-        $g1 = $a1 / $b1. $g1 . "<br>";
+        $g1 = $a1 / $b1. "<br>";
         if ($b1 === 0){
             echo "Деление на 0 !!!";
         }
