@@ -33,14 +33,14 @@
 <body>
 
 <div>
-    <h3>Calculator on PHP with  SWITCH</h3>
+    <h3>Calculator on PHP with SWITCH</h3>
     <?php
     error_reporting(0);
     $a = 10;
     $b = 0;
     $c = "/";
 
-    switch ($c){
+    switch ($c) {
         case "+":
             $sum = $a + $b . "<br>";
             break;
@@ -52,10 +52,10 @@
             break;
         case "/":
             $divis = $a / $b . "<br>";
-            if ($b === 0){
+            if ($b === 0) {
                 echo "Деление на 0!!!" . "<<br>>";
             }
-            break;hg``
+            break;
         case "%":
             $rem = $a % $b . "<br>";
 
@@ -73,23 +73,23 @@
     ?>
 </div>
 <div>
-    <h3>Calculator on PHP with  IF/ELSE</h3>
+    <h3>Calculator on PHP with IF/ELSE</h3>
     <?php
     error_reporting(0);
     $a1 = 1;
     $b1 = 0;
     $c1 = "/";
 
-    if ($c1 === "+"){
-        $d1 = $a1 + $b1. "<br>";
+    if ($c1 === "+") {
+        $d1 = $a1 + $b1 . "<br>";
 
-    } elseif ($c1 === "-"){
-        $f1 = $a1 + $b1. "<br>";
-    } elseif ($c1 === "*"){
-        $e1 = $a1 * $b1. "<br>";
-    } elseif ($c1 === "/"){
-        $g1 = $a1 / $b1. "<br>";
-        if ($b1 === 0){
+    } elseif ($c1 === "-") {
+        $f1 = $a1 + $b1 . "<br>";
+    } elseif ($c1 === "*") {
+        $e1 = $a1 * $b1 . "<br>";
+    } elseif ($c1 === "/") {
+        $g1 = $a1 / $b1 . "<br>";
+        if ($b1 === 0) {
             echo "Деление на 0 !!!";
         }
     }
@@ -262,18 +262,137 @@
 </div>
 <div>
     <?php
-//   $speed=120;
-   $b1=120;
-   $array2 = [1,2,3,5,6,6,3,3,5];
-   echo ($speed <= 60) ? "Speed normal" : "Speed not normal";
-   echo "<br>";
-   echo $speed ? $b1 : "Другое значение";
+    $speed = 120;
+    $b1 = 120;
+    $array2 = [1, 2, 3, 5, 6, 6, 3, 3, 5];
+    echo ($speed <= 60) ? "Speed normal" : "Speed not normal";
     echo "<br>";
-   echo $speed ?? "Другое значение";
+    echo $speed ? $b1 : "Другое значение";
+    echo "<br>";
+    echo $speed ?? "Другое значение";
+
+    ?>
+
+
+</div>
+<div>
+    <?php
+    $arr = [1, 2, 3, 4, 5, 6, 7, 8];
+    $arr1 = [];
+    for ($i = 2; $i < 15; $i++) {
+        if ($i > 11) {
+            break;
+        }
+    }
+    echo $i;
+    $a = 10;
+    while ($a < 20) {
+        echo "<br>";
+        echo "<pre>";
+        echo $a++;
+
+    }
+    foreach ($arr as $value) {
+        $value = $value * 2;
+        $arr1[] = $value;
+    }
+
+    echo "<pre>";
+    var_dump($arr1);
+
+    foreach ($arr as $key => $value){
+        $key;
+        echo "{$key} => {$value}";
+        echo "<br>";
+        print_r($arr);
+    }
+    ?>
+    </div>
+    <div>
+        <?php
+        $arr = [];
+        echo substr("hello world",6,5 );
+        echo "<br>";
+        echo strpos("hello world","world");
+        echo "<br>";
+        echo trim(" 1234567 ",' ');
+        if (empty($arr)){
+            echo "<br>";
+            echo "Массив пустой!";
+        }
+        echo array_column($arr);
+
+        $a12[] = "PHP";
+        $a12[] = "HTML";
+        $a12[] = "CSS";
+        sort($a12);
+        var_dump($a12);
+        echo "<br>";
+        echo current($a12);
+        echo "<br>";
+        echo next($a12);
+        echo "<br>";
+        echo prev($a12);
+        echo "<br>";
+        echo end($a12);
+        echo "<br>";
+        echo reset($a12);
+        echo "<br>";
+
+        var_dump( in_array("PHP",$a12));
+
+        $b = ["1+",2,3,"5+",3,6,4,6];
+        //$str = implode("+",$b);
+        //echo $str;
+        $str1 = explode("+",$str);
+        echo $str1;
+
+
+        ?>
+
+
+    </div>
+<div>
+    <?php
+    $a123["one"] = "PHP";
+    $a123["two"] = "HTML";
+    $a123["three"] = "CSS";
+    $extr = extract($a123);
+    var_dump( $one , $two , $three);
+
+
+    $city = "San Francisco";
+    $state = "CA";
+    $event = "SIGGRAPH";
+
+    $location_vars = array("city", "state");
+
+    $result = compact("event", "nothing_here", $location_vars);
+    echo "<br>";
+    print_r($result);
+
 
     ?>
 
 </div>
+<div>
+    <?php
+   $arr11[] = "PHP";
+   $arr11[] = "HTML";
+   $arr11[] = "CSS";
+   $arr22[] = "PHP";
+   $arr22[] = "PHP 7.2";
+   $r[] = array_diff($arr11,$arr22);
+   $l[] = array_diff($arr22,$arr11);
+   $rl = array_merge($r,$l);
+   echo "<br>";
+   var_dump($rl);
+    ?>
+
+</div>
+
+
+
 
 
 </body>
