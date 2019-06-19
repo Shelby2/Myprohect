@@ -13,80 +13,124 @@
 
 function sum($a, $b)
 {
-    echo "Сумма двух чисел " . $a . " и " . $b . ": " . ($a + $b);
+    return "Сумма двух чисел " . $a . " и " . $b . ": " . ($a + $b);
 }
 
-sum(10, 15);
+echo sum(10, 15);
 
 function difference($a, $b)
 {
-    echo "<br>" . "Разность двух чисел " . $a . " и " . $b . ": " . ($a - $b);
+    return "<br>" . "Разность двух чисел " . $a . " и " . $b . ": " . ($a - $b);
 }
 
-difference(10, 15);
+echo difference(10, 15);
 
 function multiplication($a, $b)
 {
-    echo '<br>' . "Умнржение двух чисел " . $a . " и " . $b . ": " . ($a * $b);
+    return '<br>' . "Умнржение двух чисел " . $a . " и " . $b . ": " . ($a * $b);
 }
 
-multiplication(34, 0);
+echo multiplication(34, 0);
 
 error_reporting(0);
 
 function division($a, $b)
 {
-    echo '<br>' . "Частное двух чисел " . $a . " и " . $b . ": " . ($a / $b);
+    return '<br>' . "Частное двух чисел " . $a . " и " . $b . ": " . ($a / $b);
     if ($b === 0) {
         echo "Деление на 0 !!!";
     }
 }
 
-division(34, 0);
+echo division(34, 0);
 
 function remainder($a, $b)
 {
-    echo '<br>' . "Остаток от деления " . $a . " и " . $b . ": " . ($a % $b);
+    return '<br>' . "Остаток от деления " . $a . " и " . $b . ": " . ($a % $b);
 }
 
-remainder(20, 15);
+echo remainder(20, 15);
 
 
 function length_hypotenuse($a, $b)
 {
-    echo '<br>' . "Длина гипотенузы прямоугольного треугольника со сторонами " . $a . " и " . $b . ":" . (hypot($a, $b));
+    return '<br>' . "Длина гипотенузы прямоугольного треугольника со сторонами " . $a . " и " . $b . ":" . (hypot($a, $b));
 }
 
-length_hypotenuse(10, 15);
+echo length_hypotenuse(10, 15);
 
 function logarifm($a)
 {
-    echo '<br>' . "Натуральный логарифм числа " . $a . " : " . (log($a));
+    return '<br>' . "Натуральный логарифм числа " . $a . " : " . (log($a));
 }
 
-logarifm(10);
+echo logarifm(10);
 
 function rounding($a)
 {
-    echo '<br>' . "Округление числа в меньшую сторону" . $a . " : " . (floor($a));
+    return '<br>' . "Округление числа в меньшую сторону" . $a . " : " . (floor($a));
 }
 
-rounding(11.99);
+echo rounding(11.99);
 
 function exponentiation($a, $b)
 {
-    echo '<br>' . "Возведение " . $a . " в степень " . $b . ": " . (pow($a, $b));
+    return '<br>' . "Возведение " . $a . " в степень " . $b . ": " . (pow($a, $b));
 }
 
-exponentiation(2, 3);
+echo exponentiation(2, 3);
 
 function round_number($a)
 {
-    echo '<br>' . "Округление числа " . $a . " : " . (round($a));
+    return '<br>' . "Округление числа " . $a . " : " . (round($a));
 }
-round_number(10.3);
+
+echo round_number(10.3);
 
 
 ?>
+
+<div>
+    <h2></h2>
+    <?php
+    $a = "Hello world!";
+    $b = false;
+
+    function bold($a, $b)
+    {
+        $new = [];
+        if ($b == true) {
+            foreach ($a as $value) {
+                $new[] = '<b>' . $value . '</b>';
+            }
+        } else {
+            echo $a;
+        }
+        return $new;
+    }
+    $new = bold($a);
+    foreach ($new as $value) {
+        echo $value . '<br>';
+    }
+
+    ?>
+</div>
+
+<div>
+    <h1>Рекурсия</h1>
+    <?php
+    function factorial ($value)
+    {
+        if ($value == 0){
+            return 1;
+        }
+
+            return $value * factorial( $value - 1);
+
+    }
+    $result = factorial(5);
+    echo $result;
+    ?>
+</div>
 </body>
 </html>
